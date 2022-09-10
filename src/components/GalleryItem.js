@@ -26,6 +26,7 @@ function GalleryItem(props) {
             <div style={simpleStyle}>
                 <h3>{props.item.trackName}</h3>
                 <h4>{props.item.collectionName}</h4>
+                <img src={props.item.artworkUrl60}/>
             </div>
         )
     }    
