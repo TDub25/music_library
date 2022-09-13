@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react' 
 
-function GalleryItem(props) {
+function GalleryItem(props){
     let [view, setView] = useState(false)
 
     const simpleStyle = {
@@ -20,16 +20,15 @@ function GalleryItem(props) {
         'backgroundSize': 'cover',
         'color': 'yellow'
     }
-    
+
     const simpleView = () => {
         return (
             <div style={simpleStyle}>
                 <h3>{props.item.trackName}</h3>
                 <h4>{props.item.collectionName}</h4>
-                <img src={props.item.artworkUrl60}/>
             </div>
         )
-    }    
+    }
 
     const detailView = () => {
         return (
@@ -43,13 +42,11 @@ function GalleryItem(props) {
     }
 
     return (
-        <div onClick={() => setView(!view)}
-        style={{'display': 'inline-block'}}>
-        
-            {/* This simple ternary shows the simple view when 'view' is false! */}
-            {view ? detailView() : simpleView()}
-
+        <div onClick={() =>setView(!view)} style={{'display': 'inline-block'}}>
+            <p>One Gallery Item</p>
+                {view ? detailView() : simpleView()}
         </div>
     )
 }
+
 export default GalleryItem
